@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carinho Cards</title>
+    <link rel="shortcut icon" href="/static/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/cartas.css">
+</head>
+
+
+<body>
+
+    
+    
+    <div class="background">
+        <img src="/static/assets/fundinho.png" alt="">
+    </div>
+
+    <div class="nuvens">
+        <img src="/static/assets/nuvem_um.png" alt="" class="nuvem-um">
+        <img src="/static/assets/nuvem_tress.png" alt="" class="nuvem_tres">
+        <img src="/static/assets/nuvem_tress.png" alt="" class="nuvem_t">
+        <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-dois">
+        <img src="/static/assets/nuvem_tress.png" alt="" class="nuvem_quatro" width="400px">
+        <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-cinco">
+        <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-s">
+        <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-oito" width="450px">
+        <img src="/static/assets/nuvem_tress.png" alt="" class="nuvem-nove">
+        <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-d">
+        <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-o" width="450px">
+        
+    </div>
+
+    <h1>CARTAS</h1>
+
+    <div class="estrelinhas">
+        <span class="icone" style="--i: 3; --x: 10;"></span>
+        <span class="icone" style="--i: 29; --x: 30;"></span>
+        <span class="icone" style="--i: 7; --x: 50;"></span>
+        <span class="icone" style="--i: 22; --x: 70;"></span>
+        <span class="icone" style="--i: 41; --x: 90;"></span>
+        <span class="icone" style="--i: 18; --x: 20;"></span>
+        <span class="icone" style="--i: 35; --x: 40;"></span>
+        <span class="icone" style="--i: 50; --x: 60;"></span>
+        <span class="icone" style="--i: 3; --x: 80;"></span>
+    </div>
+
+    <div class="cartas">
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_um.png" alt="" class="carta_um" id="carta_um" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_dois.png" alt="" class="carta_dois" id="carta_dois" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_tres.png" alt="" class="carta_tres" id="carta_tres" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+    </div>
+
+    <div class="estrelinhas">
+        <span class="icone" style="--i: 3; --x: 10;"></span>
+        <span class="icone" style="--i: 29; --x: 30;"></span>
+        <span class="icone" style="--i: 7; --x: 50;"></span>
+        <span class="icone" style="--i: 22; --x: 70;"></span>
+        <span class="icone" style="--i: 41; --x: 90;"></span>
+        <span class="icone" style="--i: 18; --x: 20;"></span>
+        <span class="icone" style="--i: 35; --x: 40;"></span>
+        <span class="icone" style="--i: 50; --x: 60;"></span>
+        <span class="icone" style="--i: 3; --x: 80;"></span>
+    </div>
+
+    <div class="cartas_dois">
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_quatro.png" alt="" id="carta_quatro" class="carta_quatro" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_cinco.png" alt="" id="carta_cinco" class="carta_cinco" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_s.png" alt="" id="carta_seis" class="carta_s" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+    </div>
+
+    <div class="estrelinhas">
+        <span class="icone" style="--i: 3; --x: 10;"></span>
+        <span class="icone" style="--i: 29; --x: 30;"></span>
+        <span class="icone" style="--i: 7; --x: 50;"></span>
+        <span class="icone" style="--i: 22; --x: 70;"></span>
+        <span class="icone" style="--i: 41; --x: 90;"></span>
+        <span class="icone" style="--i: 18; --x: 20;"></span>
+        <span class="icone" style="--i: 35; --x: 40;"></span>
+        <span class="icone" style="--i: 50; --x: 60;"></span>
+        <span class="icone" style="--i: 3; --x: 80;"></span>
+    </div>
+
+    <div class="cartas_dois">
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_sete.png" alt="" class="carta_sete" id="carta_sete" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_oito.png" alt="" class="carta_oito" id="carta_oito" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+        <div class="carta-container" onclick="flipCard(this)">
+            <div class="carta-frente">
+                <img src="/static/assets/carta_nove.png" alt="" class="carta_nove" id="carta_nove" width="280px">
+            </div>
+            <div class="carta-verso">
+                <img src="/static/assets/carta_verso.png" alt="" width="280px">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="botoes">
+        <button class="jogar">
+            <a href="/antes">Jogar</a>
+        </button>
+
+        <button class="voltar">
+            <a href="/como_jogar">voltar</a>
+        </button>
+    </div>
+
+    <img src="/static/assets/cartas_fundos.png" alt="" class="parte_cartas">
+
+    <div class="glow-effect"></div>
+
+    <div id="overlay" onclick="closeOverlay()">
+        <img id="overlay-img" src="" alt="Carta em destaque">
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+    </script>
+
+<script>
+    function flipCard(card) {
+        card.classList.toggle('flipped');
+    }
+
+    function highlightCard(imgElement) {
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+
+        overlayImg.src = imgElement.src;
+        overlay.style.display = "flex";
+    }
+
+    function closeOverlay() {
+        const overlay = document.getElementById("overlay");
+        overlay.style.display = "none";
+    }
+
+    // Aplica o evento de clique duplo para todas as cartas da frente
+    document.querySelectorAll(".carta-frente img").forEach(img => {
+        img.ondblclick = () => highlightCard(img);
+    });
+</script>
+</body>
+</html>

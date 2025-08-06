@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carinho card</title>
+    <link rel="stylesheet" href="/static/styles/jogo.css">
+    <link rel="shortcut icon" href="/static/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div  class="background">
+        <video loop autoplay muted>
+            <source src="/static/assets/video_rosa.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <div class="fundo_roxo">
+        <img src="/static/assets/fundo_roxo_branco.png" alt="">
+    </div>
+
+    <button class="sortear" onclick="sortearcartas()">Sortear Cartas</button>
+    <button class="jogar" onclick="jogar()" >Jogar</button>
+    
+    <div class="cartasjogador"></div>
+    <div class="cartajog"></div>
+    <div class="atributos"></div>
+    
+    <div class="cartascomputador"></div>
+    <div class="cartacomp"></div>
+    <div id="resultado"></div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

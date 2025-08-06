@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carinho Card</title>
+    <link rel="shortcut icon" href="/static/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/antes_jogar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+<body>
+
+    <div class="estrelinhas">
+        <span class="icone" style="--i: 3; --x: 10;"></span>
+        <span class="icone" style="--i: 29; --x: 30;"></span>
+        <span class="icone" style="--i: 7; --x: 50;"></span>
+        <span class="icone" style="--i: 22; --x: 70;"></span>
+        <span class="icone" style="--i: 41; --x: 90;"></span>
+        <span class="icone" style="--i: 18; --x: 20;"></span>
+        <span class="icone" style="--i: 35; --x: 40;"></span>
+        <span class="icone" style="--i: 50; --x: 60;"></span>
+        <span class="icone" style="--i: 3; --x: 80;"></span>
+    </div>
+
+    <audio id="musica" loop>
+        <source src="/static/assets/musica.mp3" type="audio/mpeg">
+        <source src="/static/assets/musica.mp3" type="audio/ogg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <button id="playMusica">
+        <img class="som" src="/static/assets/som_roxo.png" alt="" width="30px">
+    </button>
+
+    <div  class="background">
+        <video loop autoplay muted>
+            <source src="/static/assets/videoplayback.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="geral">
+        <div class="infos">
+            <h1> ANTES DE COMEÇAR...</h1>
+            <p>Antes de começar o jogo, tenha a <ins>certeza</ins> de que entendeu as regras e está<br>
+            <ins>pronto para se divertir!</ins> Explore, experimente e aproveite cada momento.<br>
+            O mais importante não é só vencer, mas sim <ins>curtir e se divertir</ins></p>
+        </div>
+        <div class="botoes">
+            <button class="pronto">
+                <a href="/jogar">Estou pronto(a)!</a>
+            </button>
+            <button class="voltar">
+                <a href="/comojogar">Voltar para entender melhor o jogo</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="balanco">
+        <img src="/static/assets/zangadinho.png" class="animate_animated animate__fadeInRight"  alt=""  width="300px">
+    </div>
+    
+    <div class="nuvem-baixo">
+        <img src="/static/assets/nuvenss.png" alt="" width="1535px">
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('musica');
+        var playButton = document.getElementById('playMusica');
+
+        // Iniciar a música ao clicar no botão
+        playButton.addEventListener('click', function() {
+            audio.play();
+        });
+    });
+</script>
+</body>
+</html>

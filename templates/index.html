@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carinho Cards</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+    <link rel="shortcut icon" href="/static/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* Reset básico */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: Arial, sans-serif;
+        }
+    
+        /* Estilo do botão do menu */
+        .menu-btn {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 30px;
+          height: 25px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+          margin: 20px;
+          margin-left: 1350px;
+          margin-top: 80px;
+          position: fixed;
+        }
+    
+        .menu-btn span {
+          width: 100%;
+          height: 3px;
+          background-color: #a51246;
+          transition: all 0.3s ease;
+        }
+    
+        /* Estilo do menu de navegação */
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          background-color: #ca5a81;
+          padding: 10px;
+          position: absolute;
+          top: 60px;
+          left: 20px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          margin-left: 1260px;
+          margin-top: 35px;
+        }
+    
+        .nav-links a {
+          text-decoration: none;
+          color: #333;
+          padding: 10px;
+          transition: background-color 0.3s ease;
+        }
+    
+        .nav-links a:hover {
+          background-color: #a51246;
+          color: white;
+        }
+    
+        /* Quando o menu está ativo */
+        .nav-links.active {
+          display: flex;
+        }
+    
+        /* Animação do botão do menu */
+        .menu-btn.active span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+    
+        .menu-btn.active span:nth-child(2) {
+          opacity: 0;
+        }
+    
+        .menu-btn.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .ao img {
+        animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+        0% { opacity: 0.3; filter: drop-shadow(0 0 5px #a51246); }
+        100% { opacity: 1; filter: drop-shadow(0 0 15px #a51246); }
+    }
+      </style>
+</head>
+
+<div class="light-cursor" id="cursor"></div>
+
+<nav class="nav-links">
+    <a href="/cartas">Cartas</a>
+    <a href="/comojogar">Como jogar</a>
+    <a href="#">Agradecimentos</a>
+  </nav>
+
+<nav class="teste">
+    <ul>
+        <li>
+            <p class="animate__animated animate__fadeInDown">Aproveite o Jogo!</p>
+        </li>
+
+        <li>
+            <p class="animate__animated animate__fadeInDown">O melhor TCG do mundo!</p>
+        </li>
+    </ul>
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+<body>
+    
+    <div class="background">
+        <img src="/static/assets/teste.png" alt="">
+    </div>
+
+    <div class="estrelinhas">
+        <span class="icone" style="--i: 3; --x: 10;"></span>
+        <span class="icone" style="--i: 29; --x: 30;"></span>
+        <span class="icone" style="--i: 7; --x: 50;"></span>
+        <span class="icone" style="--i: 22; --x: 70;"></span>
+        <span class="icone" style="--i: 41; --x: 90;"></span>
+        <span class="icone" style="--i: 18; --x: 20;"></span>
+        <span class="icone" style="--i: 35; --x: 40;"></span>
+        <span class="icone" style="--i: 50; --x: 60;"></span>
+        <span class="icone" style="--i: 3; --x: 80;"></span>
+    </div>
+    
+    <div class="container">
+
+        <div class="container-imagens">
+            <img class="animate_animated animate__slideInLeft" src="/static/assets/ursinhos .png" width="890px" alt="Imagem animada" >
+        </div>
+
+
+        <div class="animate__animated animate__fadeInRight">
+          <div class="container-bemvindo">
+              <h2 class="bemvindo">Bem Vindo</h2>
+              <h2 class="ao">
+                  Ao <img src="/static/assets/corações.png" alt="">
+              </h2>
+
+              <h2 class="carinhocards">CARINHO CARD</h2>
+
+              <p class="texto" >
+                Entre no mundo dos <ins>Ursinhos Carinhosos</ins>, onde cada carta é pura <ins>magia</ins> e <ins>amizade!</ins> Colecione, 
+                <ins>batalhe</ins> e espalhe amor em cada jogada!
+              </p>
+        </div>
+
+        <div class="animate__animated animate__fadeInUpBig">
+            <button class="jogar">
+                <a href="/antes">Jogar</a>
+            </button>
+
+            <button class="infos">
+                <a href="/comojogar">Mais Informações</a>
+            </button>
+        </div>
+          
+      </div>
+    </div>
+
+    
+  <script>
+    function toggleMenu() {
+      const menuBtn = document.querySelector('.menu-btn');
+      const navLinks = document.querySelector('.nav-links');
+
+      // Alternar a classe "active" no botão e no menu
+      menuBtn.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+    
+
+<audio id="musica" loop>
+    <source src="/static/assets/musiquinha.mp3" type="audio/mpeg">
+    <source src="/static/assets/musiquinha.mp3" type="audio/ogg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<button id="playMusica">
+    <img class="som" src="/static/assets/som_roxo.png" alt="" width="30px">
+</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('musica');
+        var playButton = document.getElementById('playMusica');
+
+        // Iniciar a música ao clicar no botão
+        playButton.addEventListener('click', function() {
+            audio.play();
+        });
+    });
+</script>
+
+<script>
+  const cursor = document.getElementById("cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Carinho Card</title> 
+    <link rel="stylesheet" href="/static/styles/como_jogar.css"> 
+    <link rel="shortcut icon" href="/static/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<style>
+
+@keyframes appear {
+  from{
+      opacity: 0;
+      scale: 0.4;
+  }
+    to{
+       opacity: 1;
+       scale: 1;
+  }
+}
+
+.block{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.block_dois{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.block_tres{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.block_quatro{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  height: 500px; /* Defina uma altura fixa para evitar mudanças */
+  position: relative;
+  margin: auto;
+  overflow: hidden; /* Garante que não haja mudanças no layout */
+}
+/* Define a caixa como border-box para todos os elementos */
+* {box-sizing: border-box}
+
+/* Define fonte padrão para o corpo da página e remove margens */
+body {font-family: Verdana, sans-serif; margin:0}
+
+
+/* Oculta os slides por padrão */
+.mySlides {
+  display: none;
+  margin-top: 200px;
+  margin-top: -5px;
+}
+
+/* Alinha imagens verticalmente */
+img {vertical-align: middle;}
+
+/* Contêiner do slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  
+}
+
+/* Botões "Próximo" e "Anterior" */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 33%;
+  width: auto;
+  padding: 16px;
+  margin-top: 2px;
+  color: #b93f6a;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; /* Impede a seleção do texto */
+}
+
+@media screen and (max-width: 1020px){
+
+  .prev, .next {
+    margin-top: -30%;
+  }
+
+}
+
+/* Posiciona o botão "Próximo" à direita */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+.prev:hover, .next:hover {
+  background-color: white;
+}
+
+/* Estilo do ponto ativo e efeito hover */
+.active, .dot:hover {
+  background-color: #a51246;
+}
+
+/* Animação de transição entre slides */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Reduz o tamanho da fonte em telas pequenas */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.nuvens img {
+    animation: blink 1s infinite alternate;
+}
+
+.nuvem-um{
+    animation: blink 1s infinite alternate;
+}
+
+.tres{
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1.5; filter: drop-shadow(0 0 5px #70d9ff); }
+    100% { opacity: 1; filter: drop-shadow(0 0 15px #70d9ff); }
+}
+
+</style>
+
+<body>
+
+    <div class="class="animate__animated animate__bounce"">
+
+      <img src="/static/assets/nuvem_um.png" alt=" " class="nuvem-um">
+
+      <div class="background">
+          <img src="/static/assets/fundinho.png" alt="">
+      </div>
+
+      <div class="botoes">
+        <button class="jogar_cima">
+          <a href="/cartas">Cartas</a>
+        </button>
+
+        <button class="sair_cima">
+          <a href="/">Sair</a>
+        </button>
+      </div>
+
+      <h2>Como Jogar?</h1>
+
+
+      <div class="block">
+        <!-- Contêiner do Slideshow -->
+        <div class="slideshow-container">
+
+          <!-- Imagens do slideshow -->
+          <div class="mySlides fade">
+            <img src="/static/assets/animadinhanha.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/static/assets/carinhosa.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/static/assets/dorminhoco.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/static/assets/estrelinha.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/static/assets/oopsy.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/static/assets/zangado.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/static/assets/solzinho.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/static/assets/sortudo.png" style="width:100%">
+          </div>
+        
+            <!-- Botões para navegar entre os slides -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094; </a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+      <br>
+
+        <div class="nuvens">
+          <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-dois">
+          <img src="/static/assets/nuvem_tress.png" alt="" class="nuvem-tres">
+          <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-cinco" width="500px">
+          <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-se" width="500px">
+          <img src="/static/assets/nuvem.png" alt="" class="nuvem-sete"> 
+          <img src="/static/assets/nuveem.png" alt="" class="nuvem-oito" width="700px">
+          <img src="/static/assets/nuveem.png" alt="" class="nuvem-nove" width="740px"> 
+          <img src="/static/assets/nuvem-quatro.png" alt="" class="nuvem-quatro">
+
+          <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-tre">
+          <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-quato" width="500px">
+
+          <img src="/static/assets/nuvem_tress.png" alt="" class="nuvem-quin">
+          <img src="/static/assets/nuvem_dois.png" alt="" class="nuvem-deze" width="500px">
+        </div>
+
+      
+      <!-- Indicadores de slides -->
+      <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+      </div>
+
+      <div class="block_dois">
+        <div class="passos">
+            <div class="passo1">
+              <div class="preparacao">
+                <img src="" alt="">
+                <h3>Preparação:</h3>
+                <ul>
+                  <li>
+                    2 Jogadores, cada um <br>
+                    com 3 cartas na mão (bancada)<br>
+                  </li>
+                  <li>
+                    Uma carta inicial é<br>
+                    é colocada no centro.
+                  </li>
+                </ul>
+                <img src="/static/assets/lacinho_verde.png" alt="" class="lacinho-1" width="290px">
+                <h1>1</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="passo2">
+            <div class="comojogar">
+              
+              <h3>Como Jogar:</h3>
+              <ul>
+                <li>
+                  Cada jogador usa uma carta <br>
+                  da sua bancada para enfrentar<br>
+                  a carta inicial
+                </li>
+                <li>
+                  Se ganhar, descarta a carta<br>
+                  inicial e marca ponto
+                </li>
+                <li>
+                  Se perder, o outro jogador tenta<br>
+                  enfrentar a carta inicial
+                </li>
+              </ul>
+              <img src="/static/assets/lacinho_verde.png" alt="" class="lacinho-2" width="290px">
+              <h1>2</h1>
+            </div>
+
+            <div class="passo3">
+              <div class="finalizacao">
+                <h3>Finalização:</h3>
+                <ul>
+                  <li>
+                    O primeiro jogador a <br>
+                    vencer 6 rodadas ganha<br>
+                    o jogo.
+                  </li>
+                  <li>
+                    Cartas com habilidades<br>
+                    especiais podem mudar o<br>
+                    rumo do jogo
+                  </li>
+                </ul>
+                <img src="/static/assets/lacinho_verde.png" alt="" class="lacinho-3" width="290px">
+                <h1>3</h1>
+              </div>
+        </div>
+    </div>
+
+    <div class="block_tres">
+      <div class="notebook">
+        <img src="/static/assets/pc.png" alt="">
+      </div>
+    </div>
+
+    <div class="block_quatro">
+      <div class="cll">
+        <img src="/static/assets/cll_dois.png" alt="">
+      </div>
+    </div>    
+
+    <div class="outro"> 
+      <button class="jogar">
+        <a href="/antes">Jogar Agora</a>
+      </button>
+
+      <img src="/static/assets/eles.png" alt="" class="tres" width="640px">
+    </div>
+  </div>
+
+  <div class="carinhas">
+    <img src="/static/assets/urso_azul.png" alt="" class="urso_azul" width="200px">
+    <img src="/static/assets/urso_verde.png" alt="" class="urso_verde" width="200px">
+    <img src="/static/assets/urso_verdao.png" alt="" class="urso_verdao" width="200px">
+    <img src="/static/assets/urso_rosa.png" alt="" class="urso_rosa" width="200px">
+    <img src="/static/assets/urso_roxo.png" alt="" class="urso_roxo" width="200px">
+  </div>
+
+
+<script>
+let slideIndex = 1; // Define o índice do slide atual
+showSlides(slideIndex); // Exibe o slide inicial
+
+// Função para avançar ou voltar slides
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Função para ir para um slide específico
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Função para exibir os slides
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} // Volta para o primeiro slide se ultrapassar o último
+  if (n < 1) {slideIndex = slides.length} // Vai para o último slide se tentar voltar antes do primeiro
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  // Esconde todos os slides
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", ""); // Remove a classe ativa dos pontos
+  }
+  slides[slideIndex-1].style.display = "block";  // Mostra o slide atual
+  dots[slideIndex-1].className += " active"; // Marca o ponto correspondente como ativo
+}
+</script>
+
+</body>
+</html>
