@@ -10,7 +10,7 @@ O jogo funciona da seguinte maneira: dois jogadores começam com 3 cartas cada e
 # Observação:
 O jogo está responsivo! então você pode jogar no seu celular também!
 
-# participações e links:
+# Participações e links:
 ![print telainicial](carinho_tela.png)  
 
 Participações:
