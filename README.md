@@ -1,5 +1,5 @@
 # Carinho-Cards
-Projeto CARINHO CARDS desenvolvido apos conhecimento adquirido de JavaScrip ao longo dos semestres.
+Projeto CARINHO CARDS desenvolvido após conhecimento adquirido de JavaScrip ao longo dos semestres.
 
 # Objetivo do Projeto:
 O objetivo desse projeto foi desenvolver um jogo de cartas interativo, eu e minha dupla de dev escolhemos fazer no estilo de "Super Trunfo" combinando com elementos de Pokémon, utilizando tecnologias web como HTML CSS e JavaScript. O tema que escolhemos foi "Ursinhos Carinhosos" trazendo um vizual colorido e nostálgico para o jogo alem de garantir uma experiência diferente e divertida.
