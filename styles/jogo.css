@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Annie+Use+Your+Telescope&family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bree+Serif&family=Calistoga&family=Chau+Philomene+One:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Itim&display=swap');
+
+
+:root{
+    --cor-fundo: #ca5a81;
+    --quadradao: #fcc9db;
+    --button: #f5b6d1;
+    --fundo-quadradao: #b93f6a;
+    --cor-titulo: #a51246;
+
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5b6d1;
+}
+
+.cartas-jogador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+    gap: 10px;
+}
+
+.cartas-computador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -800px;
+    gap: 10px;
+}
+
+.mesa{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.carta{
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cartasjogador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3%;
+    margin-right:25%;
+    gap: 10px;
+    margin-left: 530px;
+
+    position: fixed;
+    margin-top: 500px;
+
+}
+
+.cartasjogador img{
+    width: 100px;
+}
+
+
+
+.cartascomputador img{
+    width: 100px;
+}
+
+.cartascomputador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    margin-right:25%;
+    gap: 10px;
+}
+
+.fundo_roxo{
+    position: fixed;
+    margin-left: 200px;
+    margin-top: -30px;
+
+    z-index: -1;
+    inset: 0;
+}
+
+.sortear{
+    border: solid;
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: #a51246;
+    color: white;
+    border-color: white;
+
+    margin-top: 350px;
+    margin-left: 50px;
+    position: fixed;
+
+    transition: transform 0.3s ease;
+}
+
+.jogar{
+    border: solid;
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: #a51246;
+    color: white;
+    border-color: white;
+
+    margin-top: 300px;
+    margin-left: 77px;
+    position: fixed;
+
+    transition: transform 0.3s ease;
+}
+
+.jogar:hover{
+    background-color: rgb(241, 82, 156);
+    transition: background-color 0.8s ease, transform 0.5s ease;
+
+    transform: scale(1.1);
+}
+
+.sortear:hover{
+    background-color: rgb(241, 82, 156);
+    transition: background-color 0.8s ease, transform 0.5s ease;
+
+    transform: scale(1.1);
+}
+
+#resultado{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30;
+    margin-left: 67%;
+    margin-top: 6%;
+    font-size: 40px;
+    color: var(--cor-titulo);
+}

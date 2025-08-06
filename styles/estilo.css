@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Annie+Use+Your+Telescope&family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Sigmar&display=swap');
+@import 'animate.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bree+Serif&family=Calistoga&family=Chau+Philomene+One:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Itim&display=swap');
+
+
+@font-face {
+    font-family: 'Gliker';
+    src: local('Gliker Regular'), local('Gliker-Regular'),
+        url('/fonts/Gliker-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-imagens {
+    --animate-duration: 2s;
+}
+.container-imagens {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.animate__fadeInUpBig{
+    --animate-duration: 1.5s;
+}
+
+.animate__fadeInRight{
+    --animate-duration: 1.5s;
+}
+
+:root{
+    --cor-fundo: #ca5a81;
+    --quadradao: #fcc9db;
+    --fundo-quadradao: #b93f6a;
+    --cor-titulo: #a51246;
+
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-fundo);
+}
+
+
+
+
+.estrelinhas {
+    width: 100%; /* Cobrir toda a largura da tela */
+    height: 100vh; /* Cobrir toda a altura da tela */
+    overflow: hidden;
+    position: absolute; /* Container relativo para posicionar as estrelas */
+   
+    pointer-events: none;  /* Impede que bloqueie os botões */
+    z-index: 0;
+}
+
+.icone {
+    width: 80px;
+    height: 80px;
+    background-image: url('/static/assets/estrela_azul.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: anima linear infinite;
+    animation-duration: calc(300s / var(--i));
+
+    position: absolute; /* Posicionamento absoluto para mover livremente */
+    bottom: -80px; /* Começa abaixo da tela */
+    left: calc(var(--x) * 1%); /* Posição horizontal aleatória */
+}
+
+@keyframes anima {
+    0% {
+        transform: translateY(0) scale(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1) rotate(360deg);
+    }
+}
+
+.background{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+.background img{
+    width: 80%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.container{
+    text-align: center;
+    background-color: var(--quadradao);
+    box-shadow: #b93f6a 30px 30px 30px;
+    
+    width: 90%;
+    height: 600px;
+    z-index: -1;
+    inset: 0;
+    margin-top: -10px;
+    margin-left: 80px;
+}
+
+.teste{
+    position: fixed;
+    top: -310px; /* Ajuste a posição vertical */
+    left: -850px; /* Ajuste a posição horizontal */
+    padding: 10px;
+    border-radius: 5px;
+
+    color: white; 
+    font-family: "Itim", cursive;
+    
+}
+
+ul{
+    margin-left: 820px;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px;
+    padding: 20px;
+    width: 135px;
+}
+
+li p:hover{
+    color: var(--cor-titulo);
+    transition: color 0.8s ease, transform 0.5s ease;
+}
+
+.container{
+    position: fixed;
+    margin-top: 40px;
+}
+
+.container-imagens{
+    position: fixed;
+    margin-left: -660px;
+    margin-top: -35px;
+}
+
+
+.jogar{
+    margin-left: 950px;
+    margin-top: 470px;
+    background-color: var(--cor-titulo);
+    border-radius: 30px;
+    padding: 10px 30px;
+    border-color: white;
+
+    transition: transform 0.3s ease;
+    
+}
+
+.jogar:hover{
+    background-color: rgb(2, 122, 24);
+    transition: background-color 0.8s ease, transform 0.5s ease;
+
+    transform: scale(1.1);
+}
+
+.jogar a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Itim", cursive;
+}
+
+.infos{
+    background-color: var(--quadradao);
+    border-radius: 30px;
+    padding: 10px 30px;
+    border-color: #a51246;
+    margin-left: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.infos:hover{
+    background-color: rgb(179, 218, 245);
+    transition: background-color 0.8s ease, transform 0.5s ease;
+
+    transform: scale(1.1);
+}
+
+.infos a{
+    text-decoration: none;
+    color: var(--cor-titulo);
+    font-size: 20px;
+    font-family: "Itim", cursive;
+}
+
+h2{
+    color: #a51246;
+}
+
+p{
+    position: fixed;
+    margin-left: 945px;
+    margin-top: 360px;
+    color: white;
+}
+
+.bemvindo{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30;
+    margin-left: 850px;
+    margin-top: 120px;
+
+    position: fixed;
+    font-size: 80px;
+}
+
+.ao{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30;
+    margin-left: 850px;
+    margin-top: 190px;
+
+    position: fixed;
+    font-size: 80px;
+}
+
+.carinhocards{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30;
+    margin-left: 850px;
+    margin-top: 270px;
+
+    position: fixed;
+    font-size: 65px;
+}
+
+.texto{
+    font-size: 18px;
+    text-align: end;
+
+    width: 385px;
+    font-family: "Itim", cursive;
+}
+
+.texto:hover{
+    color: rgb(53, 199, 53);
+    transition: color 0.8s ease, transform 0.5s ease;
+}
+
+#playMusica{
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Estilos para telas pequenas (até 600px) */
+@media screen and (max-width: 1020px){
+    .container {
+        width: 90%;
+        margin-left: 5%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .bemvindo{
+        font-size: 40px;
+        margin-left: -2%;
+        margin-top: 25px;
+    }
+
+    .ao{
+        font-size: 40px;
+        margin-left: 60%;
+        margin-top: 25px;
+    }
+
+    .ao img{
+        width: 50%;
+    }
+
+    .carinhocards{
+        margin-top: 25%;
+        margin-left: 3%;
+        font-size: 40px;
+    }
+
+    .texto {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 138%;
+    }
+
+    .jogar, .infos {
+        margin-left: 5px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .jogar a, .infos a{
+        font-size: 15px;
+    }
+
+    .jogar{
+        margin-top: 170%;
+        width: 35%;
+    }
+
+    .infos{
+        margin-top: 5%;
+        width: 60%;
+    }
+
+    .container-imagens  {
+        margin-left: -50%;
+        margin-top: 37%;
+
+    }
+
+    .container-imagens img{
+        width: 95%;
+    }
+
+    ul {
+        margin-left: -30%;
+        padding: 0;
+        margin-top: -10%;
+    }
+
+    .som{
+        position: fixed;
+    }
+
+    .estrelinhas{
+        position: fixed;
+    }
+
+}
+
+
+
+    

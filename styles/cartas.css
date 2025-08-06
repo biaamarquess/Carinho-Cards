@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Annie+Use+Your+Telescope&family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Sigmar&display=swap');
+@import 'animate.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bree+Serif&family=Calistoga&family=Chau+Philomene+One:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Itim&display=swap');
+
+
+@font-face {
+    font-family: 'Gliker';
+    src: local('Gliker Regular'), local('Gliker-Regular'),
+        url('/fonts/Gliker-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+:root{
+    --cor-fundo: #ca5a81;
+    --quadradao: #fcc9db;
+    --fundo-quadradao: #b93f6a;
+    --cor-titulo: #a51246;
+
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+.estrelinhas {
+    width: 100%; /* Cobrir toda a largura da tela */
+    height: 100vh; /* Cobrir toda a altura da tela */
+    overflow: hidden;
+    position: absolute; /* Container relativo para posicionar as estrelas */
+   
+    pointer-events: none;  /* Impede que bloqueie os botões */
+    z-index: 0;
+}
+
+.icone {
+    width: 80px;
+    height: 80px;
+    background-image: url('/static/assets/estrela_rosa.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: anima linear infinite;
+    animation-duration: calc(300s / var(--i));
+
+    position: absolute; /* Posicionamento absoluto para mover livremente */
+    bottom: -80px; /* Começa abaixo da tela */
+    left: calc(var(--x) * 1%); /* Posição horizontal aleatória */
+}
+
+@keyframes anima {
+    0% {
+        transform: translateY(0) scale(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1) rotate(360deg);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+.background img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.background::after{
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(196, 9, 96, 0.532) 15%, rgba(230, 170, 194, 0.784) 50%, rgba(9, 181, 196, 0.532) 85%);
+}
+
+h1{
+    margin-left: 620px;
+    color: white;
+    font-size: 90px;
+    margin-top: 60px;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30;
+
+    text-shadow: 0 0 10px #f330a2, 0 0 20px #f330a2, 0 0 30px #9d0d61, 0 0 40px #9d0d61;
+    animation: brilho 1.5s infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+      text-shadow: 0 0 10px #f330a2, 0 0 20px #f330a2, 0 0 30px #9d0d61, 0 0 40px #9d0d61;
+    }
+    to {
+      text-shadow: 0 0 20px #f330a2, 0 0 20px #f330a2, 0 0 30px #9d0d61, 0 0 40px #9d0d61;
+    }
+  }
+
+.nuvem_t{
+    position: absolute;
+    margin-left: 1189px;
+    margin-top: 50px;
+}
+
+.nuvem-um{
+    position: absolute;
+    margin-top: -60px;
+}
+
+.nuvem-dois{
+    position: absolute;
+    margin-top: 400px;
+}
+
+.nuvem_tres{
+    position: absolute;
+    margin-left: 1192px;
+}
+
+.nuvem_quatro{
+    position: absolute;
+    margin-left: 1121px;
+    margin-top: 500px;
+}
+
+.nuvem-cinco{
+    margin-top: 500px;
+    position: absolute;
+}
+
+.nuvem-s{
+    position: absolute;
+    margin-top: 900px;
+}
+
+.nuvem-oito{
+    position: absolute;
+    margin-top: 980px;
+}
+
+.nuvem-nove{
+    position: absolute;
+    margin-top: 1400px;
+    margin-left: 1192px;
+}
+
+.nuvem-d{
+    position: absolute;
+    margin-top: 1700px;
+}
+
+.nuvem-o{
+    position: absolute;
+    margin-top: 1800px;
+}
+
+.parte_cartas{
+    z-index: -1;
+    inset: 0;
+
+    position: absolute;
+    margin-left: 80px;
+}
+
+
+button{
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: rgb(179, 218, 245);
+    border-color: white;
+    transition: background-color 0.8s ease, transform 0.5s ease;    
+}
+
+button a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #a51246;
+}
+
+button a:hover{
+    color: white;
+}
+
+.voltar{
+    margin-top: -120px;
+    margin-left: 1260px;
+    position: absolute;
+
+    font-family: "Itim", cursive;
+}
+
+.jogar{
+    margin-top: -120px;
+    margin-left: 1150px;
+    position: absolute;
+
+    font-family: "Itim", cursive;
+}
+
+button:hover{
+    background-color: #f46fe9;
+    transform: scale(1.1);
+}
+
+
+
+.carta-container {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 600px; 
+    margin: 10px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin-left: 220px;
+    margin-top: 70px;
+}
+
+.carta-frente, .carta-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.carta-frente {
+    transform: rotateY(0deg);
+}
+
+.carta-verso {
+    transform: rotateY(180deg);
+}
+
+.carta-container.flipped .carta-frente {
+    transform: rotateY(180deg);
+}
+
+.carta-container.flipped .carta-verso {
+    transform: rotateY(360deg);
+}
+
+
+.carta_um, .carta_dois, .carta_tres,
+.carta_quatro, .carta_cinco, .carta_s,
+.carta_sete, .carta_oito, .carta_nove {
+    transition: transform 0.3s ease;
+}
+
+.carta_um:hover, .carta_dois:hover, .carta_tres:hover,
+.carta_quatro:hover, .carta_cinco:hover, .carta_s:hover,
+.carta_sete:hover, .carta_oito:hover, .carta_nove:hover {
+    transform: scale(1.1);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#overlay img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(243, 136, 184);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+
+/* Impede que as cartas fiquem muito grandes em telas pequenas */
+@media screen and (max-width: 768px) {
+    .carta-container.focused {
+        transform: translate(-50%, -50%) scale(1);
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 1020px) {
+    /* Estilos gerais */
+    h1 {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .carta-container {
+        width: 100px;
+        height: 150px;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+
+    .carta-container.flipped .carta-verso {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carta-frente, .carta-verso {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carta_um:hover, .carta_dois:hover, .carta_tres:hover,
+    .carta_quatro:hover, .carta_cinco:hover, .carta_s:hover,
+    .carta_sete:hover, .carta_oito:hover, .carta_nove:hover {
+        transform: scale(1.1); /* Mantém o efeito de hover */
+    }
+
+    .carta_um, .carta_dois, .carta_tres,
+    .carta_quatro, .carta_cinco, .carta_s,
+    .carta_sete, .carta_oito, .carta_nove {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Ajustes das nuvens para telas menores */
+    .nuvem-um, .nuvem-dois, .nuvem_tres,
+    .nuvem_quatro, .nuvem-cinco, .nuvem-s,
+    .nuvem-oito, .nuvem-nove, .nuvem-d, .nuvem-o {
+        position: absolute;
+        width: auto; /* Tamanho ajustado manualmente */
+        height: 10vh; /* Altura proporcional à altura da tela */
+    }
+
+    /* Posicionamento das nuvens */
+    .nuvem-um {
+        top: 5vh;
+        left: 5%;
+        width: 120px; /* Tamanho fixo para manter a proporção */
+    }
+
+    .nuvem-dois {
+        top: 10vh;
+        right: 5%;
+        width: 100px;
+    }
+
+    .nuvem_tres {
+        top: 25vh;
+        left: 2%;
+        width: 110px;
+    }
+
+    .nuvem_quatro {
+        top: 30vh;
+        right: 10%;
+        width: 90px;
+    }
+
+    .nuvem-cinco {
+        top: 45vh;
+        left: 5%;
+        width: 130px;
+    }
+
+    .nuvem-s {
+        top: 50vh;
+        right: 5%;
+        width: 100px;
+    }
+
+    .nuvem-oito {
+        top: 65vh;
+        left: 10%;
+        width: 120px;
+    }
+
+    .nuvem-nove {
+        top: 70vh;
+        right: 2%;
+        width: 110px;
+    }
+
+    .nuvem-d {
+        top: 85vh;
+        left: 5%;
+        width: 100px;
+    }
+
+    .nuvem-o {
+        top: 90vh;
+        right: 10%;
+        width: 130px;
+    }
+
+    /* Ajustes da imagem de fundo */
+    .parte_cartas {
+        margin-left: 0;
+        width: 100%;
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    /* Ajustes dos botões */
+    .botoes {
+        position: relative;
+        margin-top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        justify-content: center; /* Centraliza os botões */
+    }
+
+    .voltar, .jogar {
+        margin: 0;
+        position: static;
+    }
+}
+
+
+

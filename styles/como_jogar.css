@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bree+Serif&family=Calistoga&family=Chau+Philomene+One:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Itim&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Annie+Use+Your+Telescope&family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Sigmar&display=swap');
+@import 'animate.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bree+Serif&family=Calistoga&family=Chau+Philomene+One:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Itim&display=swap');
+
+
+@font-face {
+    font-family: 'Gliker';
+    src: local('Gliker Regular'), local('Gliker-Regular'),
+        url('/fonts/Gliker-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.container-imagens {
+    --animate-duration: 2s;
+}
+.container-imagens {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+body{
+    background-color: #fcc9db;
+}
+
+.background{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+.background img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.background::after{
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(196, 9, 96, 0.532) 15%, rgba(230, 170, 194, 0.784) 50%, rgba(196, 9, 96, 0.532) 85%);
+}
+
+.titulo{
+    color: #a51246;
+    position: relative;
+    margin-top: -20px;
+
+    margin-left: 625px;
+    font-family: 'Lilita One', sans-serif;
+    font-size: 70px;
+}
+
+.passo1, .passo2, .passo3 {
+    width: 290px; 
+    height: 430px;
+
+    background-color: #7b9bc5; 
+    border-radius: 25px; 
+
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 4px 4px 10px white; 
+
+    position: relative;
+    text-align: left;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -15px;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30;
+    margin-left: 20px;
+}
+
+ul {
+    padding-left: 20px;
+    
+}
+
+h1 {
+    position: absolute;
+    bottom: -5px;
+    right: 30px;
+    font-size: 60px;
+    font-weight: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Lilita One', sans-serif;
+}
+
+h2{
+    margin-top: -20px;
+    margin-left: 600px;
+    color: #a51246;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30px;
+    font-size: 70px;
+
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073;
+    animation: brilho 1.5s infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6;
+    }
+  }
+
+nav{
+    margin-top: -100px;
+    margin-left: 100px;
+}
+
+button{
+    font-family: "Itim", cursive;
+    background-color: #a51246;
+    border-color: white;
+    border-radius: 30px;
+    padding: 10px 30px;
+
+    transition: transform 0.3s ease;
+    
+}
+
+button:hover{
+    background-color: rgb(179, 218, 245);
+    transition: background-color 0.8s ease, transform 0.5s ease;
+
+    transform: scale(1.1);
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nuvens{
+    margin-top: -100px;
+}
+
+.nuvem-um{
+    margin-top: -20px;
+}
+
+.nuvem-dois{
+    z-index: -1;
+    inset: 0;
+
+    margin-top: -700px;
+    position: relative;
+}
+
+.nuvem-tres{
+    z-index: -1;
+    inset: 0;
+
+    margin-left: 1192px;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.nuvem-quatro{
+    z-index: -1;
+    inset: 0;
+
+    margin-top: -70px;
+    margin-left: 710px;
+}
+
+.nuvem-cinco{
+    
+    inset: 0;
+    position: absolute;
+    margin-top: 400px;
+}
+
+.nuvem-se{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+
+    margin-top: 900px;
+}
+
+.nuvem-sete{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+    margin-top: 2835px;
+
+    margin-left: 450px;
+}
+
+.nuvem-oito{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+    margin-top: 2932px;
+
+    margin-left: 250px;
+    position: absolute;
+}
+
+.nuvem-nove{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+    
+    margin-top: 2925px;
+}
+
+.nuvem-tre{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+    margin-top: 1900px;
+}
+
+.nuvem-quato{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+    margin-top: 1990px;
+}
+
+.nuvem-quin{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+
+    margin-left: 1192px;
+    margin-top: 2200px;
+}
+
+.nuvem-deze{
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+
+    margin-top: 2490px;
+}
+
+
+
+
+.botoes{
+    margin-top: -70px;
+    margin-left: 1250px;
+}
+
+.botoes a:hover{
+    color: #a51246;
+}
+
+.sair_cima{
+    margin-left: 8px;
+}
+
+.passo1{
+    margin-left: 200px;
+    margin-top: -280px;
+}
+
+.passo1 li, .passo2 li, .passo3 li{
+    font-family: "Itim", cursive;
+    font-size: 18px;
+}
+
+.passo2{
+    margin-left: 600px;
+    margin-top: -440px;
+}
+
+.passo3{
+    margin-left: 385px;
+    margin-top: -375px;
+}
+
+.passo2 h3, .passo3 h3{
+    margin-top: 3px;
+}
+
+.lacinho-1, .lacinho-2, .lacinho-3{
+    margin-left: -19px;
+}
+
+.lacinho-1{
+    margin-top: 95px;
+}
+
+.lacinho-3{
+    margin-top: 65px;
+}
+
+.jogar{
+    margin-top: 60px;
+    
+}
+
+.jogar{
+    margin-left: 695px;
+    margin-top: -70px;
+
+    position: fixed;
+}
+
+.jogar a{
+    font-size: 20px;
+}
+
+.jogar a:hover{
+    color: #a51246;
+}
+
+.tres{
+    margin-left: 300px;
+    margin-top: -50px;
+    position: fixed;
+    margin-left: 881px;
+}
+
+.notebook{
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.cll{
+    margin-left: 100px;
+}
+
+.carinhas{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+
+
+
+@media screen and (max-width: 1020px) {
+    body {
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+
+        
+    }
+
+    .nuvens img{
+        display: none;
+    }
+
+    .titulo, h2 {
+        margin: 3.5rem auto !important;
+        text-align: center;
+        font-size: 2.5rem;
+        width: 90%;
+        margin-top: 30%;
+    }
+    
+    nav {
+        margin: 1rem auto !important;
+        width: 90%;
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-left: 20%;
+    }
+    
+    .botoes {
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: -30%; 
+        margin-left: -20%;
+    }
+    
+    .passo1 {
+        position: relative;
+        margin-left: 5%;
+        margin: auto;
+        margin-top: -70%;
+    }
+
+    .passo1 h1{
+        margin-top: -20%;
+        margin-left: 70%;
+    }
+
+    .passo2 h1{
+        margin-top: -20%;
+        margin-left: 70%;
+    }
+
+    .passo2 {
+        position: relative;
+        margin-left: 5%;
+        margin: auto;
+        margin-top: 20%;
+    }
+
+    .passo3 {
+        margin: auto;
+        margin-top: 50%;
+        margin-left: -7%;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+        margin: 0.5rem 0 !important;
+        text-align: center;
+    }
+    
+    ul {
+        padding-left: 1.5rem;
+    }
+    
+    li {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    h1 {
+        position: static;
+        font-size: 2rem;
+        text-align: center;
+        margin: 0.5rem auto;
+    }
+    
+    .jogar {
+        margin-left: 27%;
+        width: 50%;    
+    }
+    
+    .background img {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .notebook img{
+        width: 150%;
+        margin: auto;
+       margin-left: -40%;
+       margin-top: 155%;
+    }
+
+    .cll img{
+        width: 250%;
+        margin: auto;
+       margin-left: -83%;
+       margin-top: 40%;
+    }
+}

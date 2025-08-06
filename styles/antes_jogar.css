@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Annie+Use+Your+Telescope&family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Sigmar&display=swap');
+@import 'animate.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bree+Serif&family=Calistoga&family=Chau+Philomene+One:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Itim&display=swap');
+
+
+@font-face {
+    font-family: 'Gliker';
+    src: local('Gliker Regular'), local('Gliker-Regular'),
+        url('/fonts/Gliker-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.balanco {
+    --animate-duration: 2s;
+}
+.balanco {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.animate__fadeInUpBig{
+    --animate-duration: 1.5s;
+}
+
+.animate__fadeInRight{
+    --animate-duration: 1.5s;
+}
+
+.estrelinhas {
+    width: 100%; /* Cobrir toda a largura da tela */
+    height: 100vh; /* Cobrir toda a altura da tela */
+    overflow: hidden;
+    position: absolute; /* Container relativo para posicionar as estrelas */
+   
+    pointer-events: none;  /* Impede que bloqueie os botões */
+    z-index: 0;
+}
+
+.icone {
+    width: 80px;
+    height: 80px;
+    background-image: url('/static/assets/estrela_azul.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: anima linear infinite;
+    animation-duration: calc(300s / var(--i));
+
+    position: absolute; /* Posicionamento absoluto para mover livremente */
+    bottom: -80px; /* Começa abaixo da tela */
+    left: calc(var(--x) * 1%); /* Posição horizontal aleatória */
+}
+
+@keyframes anima {
+    0% {
+        transform: translateY(0) scale(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1) rotate(360deg);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+.background video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.background::after{
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 4, 117, 0.532) 15%, rgba(38, 36, 36, 0.541) 50%, rgba(45, 47, 47, 0.532) 85%);
+}
+
+.geral {
+    position: relative;
+    width: 80%;
+    
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.infos h1 {
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 30;
+    color: #061982b1;
+    font-size: 3.3rem;
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 10px #22bee4, 0 0 20px #22bee4, 0 0 30px #125c79, 0 0 40px #125c79;
+    animation: brilho 1.5s infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+      text-shadow: 0 0 10px #22bee4, 0 0 20px #22bee4, 0 0 30px #125c79, 0 0 40px #125c79;
+    }
+    to {
+      text-shadow: 0 0 20px #22bee4, 0 0 30px #22bee4, 0 0 40px #92defc, 0 0 50px #125c79;
+    }
+  }
+
+
+.infos p {
+    font-family: "Itim", cursive;
+    color: #1d106a;
+    font-size: 1.2rem;
+    margin: 0 auto 30px;
+    max-width: 605px;
+    position: static; /* Remove o posicionamento absoluto */
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.botoes a:hover{
+    color: rgb(234, 234, 117);
+}
+
+.pronto, .voltar {
+    margin: 0; /* Remove as margens fixas */
+    padding: 12px 30px;
+    background-color: #a7b2f4;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-family: "Itim", cursive;
+    transition: all 0.3s ease;
+}
+
+.pronto:hover, .voltar:hover {
+    background-color: #1d106a;
+    transform: scale(1.1);
+}
+
+.pronto a, .voltar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.nuvem-baixo{
+    position: fixed;
+}
+
+.balanco{
+    position: fixed;
+    margin-left: 1060px;
+    margin-top: -500px;
+
+    transition: all 0.3s ease;
+}
+
+.balanco:hover{
+    transform: scale(1.1);
+}
+
+#playMusica{
+    background-color: transparent;
+    border: none;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.nuvem-baixo img {
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1.5; filter: drop-shadow(0 0 5px #70d9ff); }
+    100% { opacity: 1; filter: drop-shadow(0 0 15px #70d9ff); }
+}
+
+@media screen and (max-width: 1020px){
+    .geral{
+        width: 70%;
+        margin-top: -2px;
+    }
+
+    .infos h1{
+        font-size: 25px;
+    }
+
+    .infos p{
+        width: 105%;
+        text-align: left;
+    }
+
+    .pronto{
+        height: 10%;
+        margin-left: 2%;
+        position: absolute;
+    }
+
+    .pronto a{
+        font-size: 12px;
+    }
+
+    .voltar{
+        margin-top: 80px;
+    }
+
+    .voltar a{
+        font-size: 12px;
+    }
+
+    .nuvem-baixo img{
+        width: 350%;
+        margin-top: -35%;
+        position: fixed;
+    }
+}
